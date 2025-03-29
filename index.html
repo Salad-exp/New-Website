@@ -1400,7 +1400,7 @@
         <i class="fas fa-info-circle notification-icon"></i>
         <div class="notification-content">
           <div class="notification-title">Beta only</div>
-          <div class="notification-message">To download salad, boost this server: discord.gg/getsalad or buy a key here: https://saladlol.mysellauth.com/</div>
+          <div class="notification-message">To download salad, buy a key here: https://saladlol.mysellauth.com/</div>
         </div>
         <button class="notification-close">
           <i class="fas fa-times"></i>
@@ -1819,7 +1819,10 @@
           closemodal();
         }
       });
-
+      document.getElementById('download-button').addEventListener('click', function(event) {
+        event.preventDefault(); 
+        window.open('https://saladlol.mysellauth.com/', '_blank');
+      });
       function anothermobilecheck() {
         return (window.innerWidth <= 768) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
       }
